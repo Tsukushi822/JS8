@@ -17,7 +17,7 @@ ul,li {
 
 li {
     list-style: none;
-    /* padding: 20px; */
+    padding: 20px;
 }
 
 header {
@@ -41,7 +41,6 @@ header {
     margin: 0;
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .red {
@@ -71,18 +70,21 @@ header {
     background-color: #f0f0f0;
 }
 
-.list-ststus {
+.list-status {
     width: 230px;
-    padding: 20px;
 }
 
 .hidden {
     display: none;
 }
 
-#pull-down-button {
-    padding: 10px 20px;
-    cursor: pointer;
-    display: inline-block;
-    border: 1px solid red;
-}
+#lists {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    border: 2px solid green;
+  }
+  
