@@ -1,6 +1,8 @@
-window.addEventListener('load' , function(){
+   function pullDown() {
    const pullDownButton = document.getElementById("lists");
    const pullDownParents = document.getElementById("pull-down")
+   const pullDownChild = document.querySelectorAll(".pull-down-list")
+   const currentList = document.getElementById("current-list")
 
 
 pullDownButton.addEventListener('mouseover' , function (){
@@ -40,8 +42,16 @@ pullDownButton.addEventListener('click' , function (){
    }
 });
 
+pullDownChild.forEach(function(list) {
+   list.addEventListener('click' , function(){
+      const value = list.innerHTML
+      currentList.innerHTML = value
+      console.log(value)
+   });
 });
+}
 
+window.addEventListener('load' , pullDown);
 
 
  
